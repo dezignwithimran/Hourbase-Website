@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Production output
+dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+*.local
+
+# TypeScript build info
+*.tsbuildinfo
