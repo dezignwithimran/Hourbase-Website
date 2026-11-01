@@ -2,21 +2,9 @@
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { Plus } from "lucide-react";
-import type { ReactNode } from "react";
 import { cn } from "../../lib/utils";
 
-export type AccordionItemData = {
-  question: string;
-  answer: string;
-};
-
-export function Accordion({
-  items,
-  className,
-}: {
-  items: AccordionItemData[];
-  className?: string;
-}) {
+export function Accordion({ items, className }) {
   return (
     <AccordionPrimitive.Root
       type="single"
@@ -46,7 +34,7 @@ export function Accordion({
   );
 }
 
-export function AccordionSurface({ children }: { children: ReactNode }) {
+export function AccordionSurface({ children }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white px-5 shadow-[0_12px_40px_rgba(15,23,42,.04)] sm:px-8">
       {children}

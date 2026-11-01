@@ -16,6 +16,3 @@ dist/
 # Editor and OS files
 .DS_Store
 *.local
-
-# TypeScript build info
-*.tsbuildinfo

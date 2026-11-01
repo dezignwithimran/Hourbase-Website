@@ -2,7 +2,7 @@
 
 Premium SaaS landing page for Hourbase, a time-tracking and billable-hours product for independent professionals.
 
-Built with React, Next.js, TypeScript, and Tailwind CSS.
+Built with React, Next.js, and Tailwind CSS.
 
 ## Development
 

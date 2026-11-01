@@ -7,7 +7,6 @@ import {
   Plus,
   Users,
 } from "lucide-react";
-import type { ReactNode } from "react";
 import { cn } from "../../lib/utils";
 
 function BentoCard({
@@ -17,13 +16,6 @@ function BentoCard({
   description,
   number,
   tall = false,
-}: {
-  className?: string;
-  visual: ReactNode;
-  title: string;
-  description: string;
-  number?: string;
-  tall?: boolean;
 }) {
   return (
     <article

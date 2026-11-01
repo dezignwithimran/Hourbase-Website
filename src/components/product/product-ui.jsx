@@ -23,10 +23,10 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "../../lib/utils";
 
-function MiniBrand({ inverse = false }: { inverse?: boolean }) {
+function MiniBrand({ inverse = false }) {
   return (
     <div className="flex items-center gap-2">
       <span className="flex size-6 items-center justify-center rounded-md bg-blue-600 text-[10px] font-bold text-white">
@@ -44,7 +44,7 @@ function MiniBrand({ inverse = false }: { inverse?: boolean }) {
   );
 }
 
-function Avatar({ initials = "IK" }: { initials?: string }) {
+function Avatar({ initials = "IK" }) {
   return (
     <span className="flex size-7 items-center justify-center rounded-full bg-slate-900 text-[9px] font-semibold text-white ring-2 ring-white">
       {initials}
@@ -52,7 +52,7 @@ function Avatar({ initials = "IK" }: { initials?: string }) {
   );
 }
 
-function DashboardChrome({ label = "Workspace" }: { label?: string }) {
+function DashboardChrome({ label = "Workspace" }) {
   return (
     <div className="flex h-12 items-center justify-between border-b border-slate-200/80 px-3 sm:px-5">
       <div className="flex items-center gap-3 sm:gap-5">
@@ -93,7 +93,7 @@ const sidebarItems = [
   { label: "Reports", icon: BarChart3 },
 ];
 
-function DashboardSidebar({ active = "Overview" }: { active?: string }) {
+function DashboardSidebar({ active = "Overview" }) {
   return (
     <aside className="hidden w-[144px] shrink-0 flex-col justify-between border-r border-slate-200/80 bg-slate-50/60 p-3 md:flex lg:w-[164px]">
       <div>
@@ -142,10 +142,6 @@ export function ProductFrame({
   children,
   className,
   label,
-}: {
-  children: ReactNode;
-  className?: string;
-  label?: string;
 }) {
   return (
     <div
@@ -166,12 +162,6 @@ function StatCard({
   detail,
   icon: Icon,
   featured,
-}: {
-  label: string;
-  value: string;
-  detail: string;
-  icon: typeof Clock3;
-  featured?: boolean;
 }) {
   return (
     <div
@@ -205,7 +195,7 @@ function StatCard({
 const weeklyValues = [4.8, 6.5, 5.3, 8.1, 6.9, 2.4, 0.8];
 const weeklyLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-function WeeklyBarChart({ compact = false }: { compact?: boolean }) {
+function WeeklyBarChart({ compact = false }) {
   return (
     <div
       className={cn(
@@ -607,7 +597,7 @@ export function OverviewDashboard() {
   );
 }
 
-function formatTimer(totalSeconds: number) {
+function formatTimer(totalSeconds) {
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;

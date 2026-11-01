@@ -5,13 +5,11 @@ import {
   Check,
   Menu,
   X,
-  type LucideIcon,
 } from "lucide-react";
 import {
   useEffect,
   useRef,
   useState,
-  type ReactNode,
 } from "react";
 import { cn } from "../../lib/utils";
 import { Button, buttonStyles } from "../ui/button";
@@ -23,7 +21,7 @@ const navItems = [
   { label: "FAQ", href: "#faq" },
 ];
 
-export function Logo({ inverse = false }: { inverse?: boolean }) {
+export function Logo({ inverse = false }) {
   return (
     <a
       href="#top"
@@ -73,7 +71,7 @@ export function Navbar() {
 
   useEffect(() => {
     if (!open) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
+    const closeOnEscape = (event) => {
       if (event.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", closeOnEscape);
@@ -171,12 +169,6 @@ export function SectionHeading({
   copy,
   align = "center",
   className,
-}: {
-  eyebrow?: string;
-  title: string;
-  copy?: string;
-  align?: "left" | "center";
-  className?: string;
 }) {
   return (
     <div
@@ -207,10 +199,6 @@ export function FeatureCard({
   icon: Icon,
   title,
   children,
-}: {
-  icon: LucideIcon;
-  title: string;
-  children: ReactNode;
 }) {
   return (
     <article className="group border-t border-slate-200 py-7 sm:py-8">
@@ -229,10 +217,6 @@ export function ProblemCard({
   number,
   title,
   children,
-}: {
-  number: string;
-  title: string;
-  children: ReactNode;
 }) {
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_35px_rgba(15,23,42,.035)] sm:p-7">
@@ -256,14 +240,6 @@ export function PricingCard({
   features,
   cta,
   featured = false,
-}: {
-  name: string;
-  price: string;
-  period?: string;
-  description: string;
-  features: string[];
-  cta: string;
-  featured?: boolean;
 }) {
   return (
     <article
@@ -318,12 +294,8 @@ export function Reveal({
   children,
   className,
   delay = 0,
-}: {
-  children: ReactNode;
-  className?: string;
-  delay?: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
